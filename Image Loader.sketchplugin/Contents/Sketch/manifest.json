@@ -1,0 +1,22 @@
+{
+  "author" : "Mario De Santis",
+  "commands" : [
+    {
+      "script" : "image-loader.cocoascript",
+      "handler" : "imageLoader",
+      "shortcut" : "control alt command l",
+      "name" : "Image Loader",
+      "identifier" : "image-loader"
+    }
+  ],
+  "menu": {
+    "items": [
+      "image-loader"
+    ]
+  },
+  "identifier" : "com.nerthase.image-loader",
+  "version" : "1.0",
+  "description" : "Image Loader",
+  "authorEmail" : "nerthase@gmail.com",
+  "name" : "Image Loader"
+}
