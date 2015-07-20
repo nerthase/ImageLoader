@@ -12,7 +12,3 @@ Start the plugin and choose the folder with new images
 
 Enjoy the magic. Your Image Layer is now updated with the new image file
 ![Step 3](Step 3.png "Enjoy the magic")
-
-## Download
-
-[Download the Image Loader Sketch plugin here]("https://github.com/nerthase/ImageLoader/archive/master.zip")
