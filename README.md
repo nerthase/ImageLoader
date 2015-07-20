@@ -15,4 +15,4 @@ Enjoy the magic. Your Image Layer is now updated with the new image file
 
 ## Download
 
-[Download the Image Loader Sketch plugin here]("Image Loader.sketchplugin")
+[Download the Image Loader Sketch plugin here]("https://github.com/nerthase/ImageLoader/archive/master.zip")
