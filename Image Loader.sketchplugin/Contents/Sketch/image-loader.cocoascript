@@ -7,6 +7,7 @@ var doc;
 function imageLoader(context) {
 	doc = context.document
 
+	// Let user choose the Images folder
 	var path = getImagesFolder()
 
 	// Select All Pages
@@ -37,18 +38,18 @@ function getImagesFolder() {
 function populateScreens(path, sourcesPage) {
 	var fileManager = NSFileManager.defaultManager()
 
-	var files = fileManager.shallowSubpathsOfDirectoryAtURL(path)
-	var numberOfFilesInFolder = files.count()
-
 	// Loop through files
-	for (var i=0; i<numberOfFilesInFolder; i++) {
+	var files = fileManager.shallowSubpathsOfDirectoryAtURL(path)
+	for (var i = 0; i < files.count(); i++) {
 		var file = files[i]
 		var key = file.lastPathComponent().stringByDeletingPathExtension()
 
 		// Get image layer
-		var imageLayer = getLayerByName(sourcesPage, key)
+		var layers = getLayersByName(sourcesPage, key) // It returns a native JS Array :(
 
-		if (imageLayer != null) {
+		for (var j = 0; j < layers.length; j++) {
+			var imageLayer = layers[j]
+
 			// Get image data
 			var data = fileManager.contentsAtPath(file)
 			var img = NSImage.alloc().initWithData(data)

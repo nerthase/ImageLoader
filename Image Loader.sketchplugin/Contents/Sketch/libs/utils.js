@@ -1,15 +1,27 @@
-function getLayerByName(page, name) {
-    var artboard = page.artboards().firstObject()
-    var layers = artboard.layers();
-    var layerLoop = layers.array().objectEnumerator();
-    while ( childLayer = layerLoop.nextObject() ) {
-        if (childLayer.name() == name) {
-            return childLayer;
+function getLayersByName(page, name) {
+    var results = Array()
+
+    var artboards = getArtboards(page)
+    while (artboard = artboards.nextObject()) {
+      var layers = getLayers(artboard)
+      while (layer = layers.nextObject()) {
+        if (layer.name() == name) {
+          results.push(layer)
         }
+      }
     }
-    return null;
+
+    return results
 }
 
 function getPages() {
   return doc.pages().objectEnumerator()
+}
+
+function getArtboards(page) {
+  return page.artboards().objectEnumerator()
+}
+
+function getLayers(artboard) {
+  return artboard.children().objectEnumerator()
 }
