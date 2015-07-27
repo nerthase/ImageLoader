@@ -2,6 +2,10 @@
 
 With this Sketch plugin you can update all the Image Layers with new images from Finder with one click!
 
+## Download
+
+[Download ImageLoader]
+
 ## How to use
 
 1. Setup your Sketch project with an Image Layer with the same name as the source file: **Image 001**
@@ -15,10 +19,6 @@ With this Sketch plugin you can update all the Image Layers with new images from
 3. Enjoy the magic. Your Image Layer is now updated with the new image file
 
 ![Step 3](Step 3.png "Enjoy the magic")
-
-## Download
-
-[Download ImageLoader]
 
 
 [Download ImageLoader]:https://github.com/nerthase/ImageLoader/archive/master.zip
