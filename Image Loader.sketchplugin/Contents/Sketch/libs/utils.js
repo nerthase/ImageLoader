@@ -5,7 +5,7 @@ function getLayersByName(page, name) {
     while (artboard = artboards.nextObject()) {
       var layers = getLayers(artboard)
       while (layer = layers.nextObject()) {
-        if (layer.name() == name) {
+        if (layer.name() == String(name)) {
           results.push(layer)
         }
       }
